@@ -49,6 +49,8 @@ import {
 
 } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 /**
  * Font Configurations
@@ -267,7 +269,9 @@ export default function RootLayout({
           antialiased
         `}
       >
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
