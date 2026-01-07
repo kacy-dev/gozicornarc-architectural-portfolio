@@ -45,7 +45,7 @@ export default function Service() {
                         </div>
                         <div className="relative w-full mx-auto sm:mx-0 order-1 sm:order-2">
                             <img
-                                src="/img/consultt.jpg"
+                                src="/img/gozie-consult.jpg"
                                 alt="About Gozicornarc"
                                 className="object-cover w-full h-[250]"
                             />
