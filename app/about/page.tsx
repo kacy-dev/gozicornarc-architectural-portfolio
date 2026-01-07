@@ -406,7 +406,7 @@ export default function AboutExtendedPremium() {
     <>
 
       <div
-        className="relative w-full h-[60vh] lg:h-[80vh] flex items-center justify-center
+        className="relative w-full h-[60vh] lg:h-[80vh] flex flex-col justify-center
                  bg-fixed bg-cover"
         style={{
           backgroundImage: "url('/img/gozie-consult.JPG')",
@@ -415,18 +415,23 @@ export default function AboutExtendedPremium() {
       >
         <div className="absolute inset-0 bg-black/30" />
 
+        <h2 className="text-left pl-15 lg:pl-30 lg:text-3xl font-extrabold font-poppins text-white relative">About</h2>
+
+
         <h2
           className="relative z-10 text-white text-[7vw] lg:text-[8vw]
-                   font-extrabold tracking-tight uppercase
+                   font-extrabold text-center tracking-tight uppercase
                    font-michroma select-none"
         >
           Gozicornarc
         </h2>
+
+        <h1 className="text-right pr-15 lg:pr-30 lg:text-3xl font-extrabold font-poppins text-white relative">Contractors Limited</h1>
       </div>
 
       <About />
 
-      <section className="relative bg-neutral-50 overflow-hidden">
+      <section className="relative bg-neutral-50 overflow-hidden lg:pt-20 pt-8 md:pt-12">
 
         {/* -------------------- CEO Image Background for Approach -------------------- */}
         <div
@@ -469,11 +474,12 @@ export default function AboutExtendedPremium() {
         </div>
 
         {/* -------------------- Header -------------------- */}
-        <div className="relative z-10 max-w-3xl mx-auto text-center mb-16 px-4 sm:px-6 lg:px-0">
+        <div className="relative z-10 max-w-3xl mx-auto text-center mb-16 px-4 sm:px-6 lg:px-0 ">
           <p className="text-sm font-bold text-orange-500 mb-2 font-poppins">
             Our Philosophy
           </p>
-          <h2 className="text-3xl sm:text-4xl font-extrabold font-michroma">
+          <p className="w-24 text-center mx-auto sm:w-24 h-1 bg-orange-400 mb-4"></p>
+          <h2 className="text-2xl lg:text-2xl sm:text-2xl font-extrabold font-michroma">
             Our Approach
           </h2>
           <p className="mt-4 text-neutral-600 text-sm sm:text-base">
@@ -484,7 +490,7 @@ export default function AboutExtendedPremium() {
         </div>
 
         {/* -------------------- Zig-Zag Approach Section -------------------- */}
-        <div className="relative z-10 flex flex-col gap-12 max-w-6xl mx-auto">
+        <div className="relative z-10 flex flex-col gap-12 pb-8 lg:pb-20 md:pb-12 max-w-6xl mx-auto">
           {APPROACH_DATA.map((item, index) => {
             const isOpen = openIndex === index;
             const isEven = index % 2 === 0;
@@ -547,10 +553,11 @@ export default function AboutExtendedPremium() {
         <FAQ />
 
         {/* -------------------- Our Goals Timeline -------------------- */}
-        {/* <div className="relative z-10 mt-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-0">
-        <h3 className="text-3xl sm:text-4xl font-extrabold font-michroma text-center mb-12">
+        <div className="relative z-10 max-w-6xl pb-20 pt-20 mx-auto px-4 sm:px-6 lg:px-20">
+        <h3 className="text-2xl lg:text-2xl sm:text-4xl font-extrabold font-michroma text-center mb-3">
           Our Goals
         </h3>
+        <p className="w-24 text-center mx-auto sm:w-24 h-1 bg-orange-400 mb-10"></p>
 
         <div className="relative flex flex-col md:flex-row items-start md:items-center justify-between gap-12 md:gap-0">
           <div className="hidden md:block absolute top-10 bottom-10 left-1/2 w-1 bg-orange-400 transform -translate-x-1/2"></div>
@@ -571,76 +578,19 @@ export default function AboutExtendedPremium() {
           ].map((goal, i) => (
             <div
               key={i}
-              className="relative bg-white rounded-lg shadow-md border border-neutral-200 p-6 text-center md:text-left md:w-1/3"
+              className="relative bg-white rounded-lg shadow-md border border-neutral-200 p-6 text-center md:text-left md:w-1/3 "
             >
               <div className="absolute -top-4 left-1/2 md:left-4 transform -translate-x-1/2 md:translate-x-0 w-8 h-8 bg-orange-400 rounded-full flex items-center justify-center text-white font-bold">
                 {i + 1}
               </div>
-              <h4 className="font-bold text-lg mb-2">{goal.title}</h4>
-              <p className="text-sm text-neutral-600">{goal.desc}</p>
+              <h4 className="font-bold text-lg mb-2 font-poppins">{goal.title}</h4>
+              <p className="text-sm text-neutral-600 font-poppins ">{goal.desc}</p>
             </div>
           ))}
         </div>
-      </div> */}
+      </div>
 
-        <div className="relative mt-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-0">
-
-          {/* -------------------- Watermark Layer -------------------- */}
-          <div
-            aria-hidden
-            className="absolute inset-0 z-0 pointer-events-none select-none"
-          >
-            <div className="w-full h-full flex flex-wrap gap-x-20 gap-y-10 justify-center items-center
-                    opacity-5 rotate-[-20deg]">
-              {Array.from({ length: 30 }).map((_, i) => (
-                <span
-                  key={i}
-                  className="text-[10rem] font-nosifer font-extrabold tracking-widest 
-                     text-neutral-200 whitespace-nowrap"
-                >
-                  GOZICORNARC
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* -------------------- Goals Content -------------------- */}
-          <h3 className="relative text-3xl sm:text-4xl font-extrabold font-michroma text-center mb-12 z-10">
-            Our Goals
-          </h3>
-
-          <div className="relative flex flex-col md:flex-row items-start md:items-center justify-between gap-12 md:gap-0 z-10">
-            {/* Timeline Line */}
-            <div className="hidden md:block absolute top-10 bottom-10 left-1/2 w-1 bg-orange-400 transform -translate-x-1/2"></div>
-
-            {/* Goal Items */}
-            {[
-              {
-                title: "Innovative Design",
-                desc: "Push architectural boundaries while staying functional and sustainable.",
-              },
-              {
-                title: "Quality Execution",
-                desc: "Ensure structural integrity, safety, and flawless implementation.",
-              },
-              {
-                title: "Client Satisfaction",
-                desc: "Build lasting relationships through transparency, reliability, and exceptional results.",
-              },
-            ].map((goal, i) => (
-              <div
-                key={i}
-                className="relative bg-white rounded-lg shadow-md border border-neutral-200 p-6 text-center md:text-left md:w-1/3 z-10"
-              >
-                <div className="absolute -top-4 left-1/2 md:left-4 transform -translate-x-1/2 md:translate-x-0 w-8 h-8 bg-orange-400 rounded-full flex items-center justify-center text-white font-bold">
-                  {i + 1}
-                </div>
-                <h4 className="font-bold text-lg mb-2">{goal.title}</h4>
-                <p className="text-sm text-neutral-600">{goal.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+        
 
         <Testimonial />
 
