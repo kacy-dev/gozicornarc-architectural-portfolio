@@ -1,4 +1,4 @@
-@import "tailwindcss";
+/* @import "tailwindcss";
 
 :root {
   --background: #ffffff;
@@ -23,4 +23,252 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+} */
+
+
+
+@import "tailwindcss";
+
+/* =====================================================
+   BASE DESIGN TOKENS
+   ===================================================== */
+:root {
+  /* Surface */
+  --background: #f9fafb;
+  /* --foreground: #0f172a; */
+
+  /* Brand / Structure */
+  --blueprint: #1e3a8a;
+  --steel: #020617;
+  --concrete: #e5e7eb;
+
+  /* Accents */
+  --accent: #0ea5e9;
+  --warning: #f59e0b;
+  --danger: #dc2626;
+  --success: #16a34a;
+
+  /* UI */
+  --border: #cbd5f5;
+  --muted: #64748b;
+
+  /* Glass */
+  --glass-bg: rgba(255, 255, 255, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.25);
 }
+
+/* ================= Font Utilities ================= */
+
+.font-roboto {
+  font-family: var(--font-roboto);
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+
+.font-audiowide {
+  font-family: var(--font-audiowide);
+}
+
+.font-goldman {
+  font-family: var(--font-goldman);
+}
+
+.font-michroma {
+  font-family: var(--font-michroma);
+}
+
+.font-zen-dots {
+  font-family: var(--font-zen-dots);
+}
+
+.font-nosifer {
+  font-family: var(--font-nosifer);
+}
+
+.font-anta {
+  font-family: var(--font-anta);
+}
+
+
+/* .dark {
+  --background: #020617;
+  --foreground: #e5e7eb;
+
+  --concrete: #1e293b;
+  --border: #1e293b;
+  --muted: #94a3b8;
+
+  --glass-bg: rgba(2, 6, 23, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.08);
+} */
+
+/* =====================================================
+   TAILWIND THEME TOKENS
+   ===================================================== */
+@theme inline {
+  /* Colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-blueprint: var(--blueprint);
+  --color-steel: var(--steel);
+  --color-concrete: var(--concrete);
+  --color-accent: var(--accent);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-success: var(--success);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-glass: var(--glass-bg);
+  --color-glass-border: var(--glass-border);
+
+  /* Typography */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+
+  /* Font weights */
+  --font-thin: 100;
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-black: 900;
+
+  /* Spacing */
+  --spacing-0: 0;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-section: 5rem;
+
+  /* Radius */
+  --radius-none: 0;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, .05);
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, .08);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, .12);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, .2);
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, .18);
+
+  /* Z-index */
+  --z-base: 1;
+  --z-dropdown: 20;
+  --z-sticky: 30;
+  --z-overlay: 40;
+  --z-modal: 50;
+  --z-toast: 60;
+
+  /* Animation */
+  --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 600ms;
+}
+
+
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll; 
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* ================= Polygon Glass Utility ================= */
+
+.clip-polygon-glass {
+  clip-path: polygon(
+    /* 6% 0%,
+    100% 0%,
+    94% 100%,
+    0% 100% */
+
+    8% 0%,
+    100% 0%,
+    100% 100%,
+    0% 100%,
+    0% 120%
+  );
+}
+
+
+/* ================= Hide Scrollbar (Cross-Browser) ================= */
+
+.hide-scrollbar {
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE / Edge */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;                /* Chrome / Safari */
+}
+
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =====================================================
+   REUSABLE COMPONENT UTILITIES
+   ===================================================== */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-glass);
+}
+
+.section {
+  padding: var(--spacing-section) var(--spacing-lg);
+}
+
+.container-max {
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+.transition-base {
+  transition: all var(--duration-normal) var(--ease-default);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* =====================================================
+   ACCESSIBILITY
+   ===================================================== */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ================= NAV STATES ================= */
