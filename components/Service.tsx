@@ -29,7 +29,7 @@ export default function Service() {
                     <div className="flex flex-col sm:flex-col-reverse lg:flex-col">
                         <div className="relative w-full mx-auto sm:mx-0 order-2 sm:order-1">
                             <img
-                                src="/img/plan.jpg"
+                                src="https://res.cloudinary.com/dgmem5lsz/image/upload/v1767871599/IMG_1379_rnotqc.png"
                                 alt="About Gozicornarc"
                                 className=" object-cover w-full h-[250]"
                             />
