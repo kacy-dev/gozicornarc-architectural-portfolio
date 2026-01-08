@@ -133,7 +133,7 @@ export default function AboutExtendedPremium() {
         </div>
 
         {/* -------------------- Zig-Zag Approach Section -------------------- */}
-        <div className="relative z-10 flex flex-col gap-12 pb-8 lg:pb-20 md:pb-12 max-w-6xl mx-auto">
+        <div className="relative z-10 flex flex-col gap-12 pb-8 lg:pb-20 md:pb-12 lg:px-40 px-4 md:px-10 sm:px-5 mx-auto">
           {APPROACH_DATA.map((item, index) => {
             const isOpen = openIndex === index;
             const isEven = index % 2 === 0;
