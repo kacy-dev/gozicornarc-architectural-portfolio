@@ -160,7 +160,7 @@ export default function Navbar() {
               <span className="text-[9px] mt-1">{item.label}</span>
               {/* orange indicator */}
               {isActive && (
-                <span className="absolute -top-3 w-full h-1 bg-orange-500 rounded-full" />
+                <span className="absolute -top-3 w-full h-1 bg-orange-400 rounded-full" />
               )}
             </Link>
           );

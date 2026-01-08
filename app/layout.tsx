@@ -250,6 +250,11 @@ export default function RootLayout({
 `,
           }}
         />
+
+         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="theme-color" content="#FF6600" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       </head>
 
       <body
@@ -270,7 +275,7 @@ export default function RootLayout({
         `}
       >
         <Navbar />
-        {children}
+       <div className="pt-[env(safe-area-inset-top)]" >{children}</div>
         <Footer />
       </body>
     </html>
