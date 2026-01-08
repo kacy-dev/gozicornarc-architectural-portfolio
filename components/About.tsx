@@ -62,7 +62,7 @@ export default function About() {
               </p>
               <div className="relative w-full mx-auto sm:mx-0 order-1 sm:order-2">
                 <img
-                  src="/img/arc.jpg"
+                  src="https://res.cloudinary.com/dgmem5lsz/image/upload/v1767870702/architectural-blueprints_ll7rxo.jpg"
                   alt="About Gozicornarc"
                   className="rounded-lg object-cover w-full h-full"
                 />

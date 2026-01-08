@@ -33,7 +33,7 @@ const APPROACH_DATA = [
 
 const CEO_IMAGES = [
   "/img/gozie-plan.PNG",
-  "/img/gozie-design.jpg",
+  "https://res.cloudinary.com/dgmem5lsz/image/upload/v1767871272/rear_hzrjjf.jpg",
   "/img/gozie-execute.jpg",
   "/img/gozie-support.jpg",
 ];
