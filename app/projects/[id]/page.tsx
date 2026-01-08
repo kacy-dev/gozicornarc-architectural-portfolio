@@ -141,6 +141,8 @@ const projects = [
   },
 ];
 
+type ImageItem = { src: string; tag: string };
+
 
 export default function ProjectDetail() {
   const { id } = useParams();
@@ -149,7 +151,7 @@ export default function ProjectDetail() {
   if (!project) notFound();
 
   const [activeFilter, setActiveFilter] = useState("All");
-  const [activeImage, setActiveImage] = useState(null);
+  const [activeImage, setActiveImage] = useState<ImageItem | null>(null);
 
   const filteredGallery =
     activeFilter === "All"
