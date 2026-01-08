@@ -1,85 +1,3 @@
-// import Image from "next/image";
-// import { notFound } from "next/navigation";
-
-// const projects = [
-//   {
-//     id: "fern-cabin",
-//     title: "Fern Cabin",
-//     category: "Residential",
-//     location: "Oregon, USA",
-//     description:
-//       "A calm residential retreat designed to blend architecture with landscape.",
-//     gallery: ["/img/gozie-design.JPG", "/img/gozie-design.JPG"],
-//   },
-//   {
-//     id: "desert-house",
-//     title: "Desert House",
-//     category: "Residential",
-//     location: "Arizona, USA",
-//     description:
-//       "A minimal desert residence responding to climate and light.",
-//     gallery: ["/img/gozie-design.JPG", "/img/gozie-design.JPG"],
-//   },
-//   {
-//     id: "mountain-chapel",
-//     title: "Mountain Chapel",
-//     category: "Religious",
-//     location: "Colorado, USA",
-//     description:
-//       "A contemporary chapel grounded in form, silence, and context.",
-//     gallery: ["/img/gozie-design.JPG", "/img/gozie-design.JPG"],
-//   },
-// ];
-
-// export default async function ProjectDetail({ params }) {
-//   // ✅ params is async in newer Next.js
-//   const { id } = await params;
-
-//   const project = projects.find((p) => p.id === id);
-
-//   if (!project) notFound();
-
-//   return (
-//     <section className="bg-white px-4 lg:px-24 py-24">
-//       <div className="max-w-6xl mx-auto">
-
-//         {/* HEADER */}
-//         <div className="mb-14">
-//           <span className="text-xs tracking-widest uppercase text-neutral-500">
-//             {project.category}
-//           </span>
-//           <h1 className="text-3xl lg:text-5xl font-extrabold font-michroma mt-4">
-//             {project.title}
-//           </h1>
-//           <p className="text-neutral-600 mt-4">
-//             {project.location}
-//           </p>
-//         </div>
-
-//         {/* GALLERY */}
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-//           {project.gallery.map((img, i) => (
-//             <div key={i} className="relative h-[420px]">
-//               <Image
-//                 src={img}
-//                 alt={project.title}
-//                 fill
-//                 className="object-cover rounded-xl"
-//               />
-//             </div>
-//           ))}
-//         </div>
-
-//         {/* DESCRIPTION */}
-//         <p className="mt-14 max-w-3xl text-neutral-700 leading-relaxed">
-//           {project.description}
-//         </p>
-
-//       </div>
-//     </section>
-//   );
-// }
-
 
 "use client";
 
@@ -96,12 +14,12 @@ const projects = [
     description:
       "A contemporary chapel grounded in form, silence, and context. Designed to respond subtly to landscape, light, and spiritual experience.",
     gallery: [
-      { src: "/img/exterior.jpg", tag: "Exterior" },
-      { src: "/img/side.jpg", tag: "Side View" },
+      { src: "/img/rear-1.JPG", tag: "Exterior" },
+      { src: "/img/rear.jpg", tag: "Side View" },
       { src: "/img/rear.jpg", tag: "Rear View" },
-      { src: "/img/rear-1.jpg", tag: "Rear Detail" },
-      { src: "/img/interior.jpg", tag: "Interior" },
-      { src: "/img/interior-1.jpg", tag: "Interior" },
+      { src: "/img/rear.jpg", tag: "Rear Detail" },
+      { src: "/img/rear.jpg", tag: "Interior" },
+      { src: "/img/rear.jpg", tag: "Interior" },
     ],
   },
 
@@ -113,12 +31,12 @@ const projects = [
     description:
       "A calm residential retreat that dissolves the boundary between architecture and forest landscape.",
     gallery: [
-      { src: "/img/exterior.jpg", tag: "Exterior" },
-      { src: "/img/side.jpg", tag: "Side View" },
+      { src: "/img/rear.jpg", tag: "Exterior" },
+      { src: "/img/rear.jpg", tag: "Side View" },
       { src: "/img/rear.jpg", tag: "Rear View" },
-      { src: "/img/rear-2.jpg", tag: "Rear View" },
-      { src: "/img/interior.jpg", tag: "Interior" },
-      { src: "/img/interior-1.jpg", tag: "Interior" },
+      { src: "/img/rear.jpg", tag: "Rear View" },
+      { src: "/img/rear.jpg", tag: "Interior" },
+      { src: "/img/rear.jpg", tag: "Interior" },
     ],
   },
 
@@ -130,12 +48,12 @@ const projects = [
     description:
       "A minimal desert residence shaped by climate, shadows, and passive cooling strategies.",
     gallery: [
-      { src: "/img/exterior.jpg", tag: "Exterior" },
-      { src: "/img/side.jpg", tag: "Side View" },
+      { src: "/img/rear.jpg", tag: "Exterior" },
+      { src: "/img/rear.jpg", tag: "Side View" },
       { src: "/img/rear.jpg", tag: "Rear View" },
-      { src: "/img/rear-3.jpg", tag: "Rear View" },
-      { src: "/img/interior.jpg", tag: "Interior" },
-      { src: "/img/interior-2.jpg", tag: "Interior" },
+      { src: "/img/rear.jpg", tag: "Rear View" },
+      { src: "/img/rear.jpg", tag: "Interior" },
+      { src: "/img/rear.jpg", tag: "Interior" },
     ],
   },
 
@@ -197,12 +115,12 @@ const projects = [
     description:
       "A future-ready technology campus promoting collaboration, openness, and environmental performance.",
     gallery: [
-      { src: "/img/exterior.jpg", tag: "Exterior" },
-      { src: "/img/side.jpg", tag: "Side View" },
-      { src: "/img/rear.jpg", tag: "Rear View" },
+      { src: "/img/rear-3.jpg", tag: "Exterior" },
+      { src: "/img/rear-3.jpg", tag: "Side View" },
+      { src: "/img/rear-3.jpg", tag: "Rear View" },
       { src: "/img/rear-3.jpg", tag: "Rear Detail" },
-      { src: "/img/interior.jpg", tag: "Interior" },
-      { src: "/img/interior-2.jpg", tag: "Interior" },
+      { src: "/img/rear-3.jpg", tag: "Interior" },
+      { src: "/img/rear-3.jpg", tag: "Interior" },
     ],
   },
 
@@ -246,7 +164,7 @@ export default function ProjectDetail() {
 
         {/* STICKY INFO */}
         <aside className="lg:sticky lg:top-28 h-fit">
-          <span className="text-xs tracking-widest uppercase text-neutral-500">
+          <span className="text-xs tracking-widest uppercase font-poppins bg-orange-400/20 p-2 rounded-full">
             {project.category}
           </span>
 
@@ -279,11 +197,11 @@ export default function ProjectDetail() {
         </aside>
 
         {/* MASONRY GALLERY */}
-        <div className="columns-1 md:columns-2 gap-6 space-y-6">
+        <div className="columns-1 md:columns-2 gap-2 space-y-2">
           {filteredGallery.map((item, i) => (
             <div
               key={i}
-              className="relative overflow-hidden rounded-2xl cursor-pointer group"
+              className="relative overflow-hidden cursor-pointer group"
               onClick={() => setActiveImage(item)}
             >
               <Image
