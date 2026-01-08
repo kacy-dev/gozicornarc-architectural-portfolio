@@ -4,6 +4,7 @@
 import { useState } from "react";
 import { useParams, notFound } from "next/navigation";
 import Image from "next/image";
+import BackButton from "@/components/BackButton";
 
 const projects = [
   {
@@ -161,6 +162,8 @@ export default function ProjectDetail() {
         );
 
   return (
+    <>
+    <BackButton />
     <section className="bg-white px-4 lg:px-24 py-24">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[360px_1fr] gap-16">
 
@@ -251,5 +254,6 @@ export default function ProjectDetail() {
         </div>
       )}
     </section>
+    </>
   );
 }

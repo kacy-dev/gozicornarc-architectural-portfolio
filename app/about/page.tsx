@@ -6,6 +6,7 @@ import About from "@/components/About";
 import FAQ from "@/components/FAQ";
 import Testimonial from "@/components/Testimonial";
 import Statement from "@/components/Statement";
+import BackButton from "@/components/BackButton";
 
 const APPROACH_DATA = [
   {
@@ -47,6 +48,7 @@ export default function AboutExtendedPremium() {
 
   return (
     <>
+    <BackButton />
 
       <div
         className="relative w-full h-[60vh] lg:h-[80vh] flex flex-col justify-center
