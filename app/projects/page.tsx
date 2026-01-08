@@ -107,7 +107,7 @@ export default function Projects() {
                 className="relative w-full h-[60vh] lg:h-[80vh] flex flex-col justify-center
                  bg-fixed bg-cover"
                 style={{
-                    backgroundImage: "url('/img/gozie-consult.JPG')",
+                    backgroundImage: "https://res.cloudinary.com/dgmem5lsz/image/upload/v1767872121/gozie-consult_svtcn2.heic",
                     backgroundPosition: "center 60%",
                 }}
             >
