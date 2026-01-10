@@ -46,15 +46,19 @@ export default function AboutExtendedPremium() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const heroImage =
+    "/img/gozie-consult.jpg";
+
+
   return (
     <>
-    <BackButton />
+      <BackButton />
 
       <div
         className="relative w-full h-[60vh] lg:h-[80vh] flex flex-col justify-center
                  bg-fixed bg-cover"
         style={{
-          backgroundImage: "https://res.cloudinary.com/dgmem5lsz/image/upload/v1767872121/gozie-consult_svtcn2.heic",
+          backgroundImage: `url('${heroImage}')`,
           backgroundPosition: "center 60%",
         }}
       >
