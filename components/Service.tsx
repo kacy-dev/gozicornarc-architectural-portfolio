@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Service() {
     return (
-        // <section className="section relative z-0">
+       
         <div className="overflow-hidden px-4 sm:px-6 md:px-10 lg:px-20 xl:px-40 py-8 md:py-12 ">
             <div className=" max-w-7xl mx-auto">
 
@@ -60,12 +60,13 @@ export default function Service() {
                         </div>
                         <div className=" relative flex text-left lg:text-center md:text-center gap-3 lg:flex-col justify-center items-center h-[200] lg:h-[250] md:h-[250] font-poppins text-xs sm:text-sm font-bold text-left sm:text-right shadow-[0_10px_10px_-2px_rgba(0,0,0,0.40)] p-3 rounded order-2 sm:order-1">
                            <h2 className="absolute top-0 bg-orange-400/40 left-0 font-bold p-2  text-center text-[15px] mb-3 font-poppins">Building</h2>  We bring designs to life through precise execution, quality craftsmanship, and strict attention to structural and material standards.
+                        </div>
                     </div>
 
                 </div>
 
             </div>
         </div>
-        // </section>
+        </div>
     );
 }
