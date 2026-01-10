@@ -35,14 +35,13 @@ export default function Service() {
                             />
                         </div>
                         <div className=" relative flex text-left lg:text-center md:text-center gap-3 lg:flex-col justify-center items-center h-[200] lg:h-[250] md:h-[250] font-poppins text-xs sm:text-sm font-bold text-center shadow-[0_10px_10px_-2px_rgba(0,0,0,0.40)] p-3 rounded order-2 sm:order-1">
-                           <h2 className="absolute top-0 bg-orange-400/40 left-0 font-bold p-2  text-center text-[15px] mb-3 font-poppins">Planning</h2> With a passion for quality, integrity, and excellence, he drives the company to deliver exceptional results in every project.
+                           <h2 className="absolute top-0 bg-orange-400/40 left-0 font-bold p-2  text-center text-[15px] mb-3 font-poppins">Planning</h2> We translate ideas into clear architectural concepts, detailed layouts, and structured project strategies that guide every stage of development.
                         </div>
                         
                     </div>
                     <div className="flex flex-col sm:flex-col-reverse lg:flex-col">
                         <div className="relative flex text-left lg:text-center md:text-center gap-3 lg:flex-col justify-center items-center h-[200] lg:h-[250] md:h-[250] font-poppins text-xs sm:text-sm font-bold text-left sm:text-right shadow-[0_10px_10px_-2px_rgba(0,0,0,0.40)] p-3 rounded order-2 sm:order-1">
-                           <h2 className="absolute top-0 bg-orange-400/40 left-0 font-bold p-2  text-center text-[15px] mb-3 font-poppins">Consultation</h2>  With a passion for quality, integrity, and excellence, he drives the company to deliver exceptional results in every project.
-                        </div>
+                           <h2 className="absolute top-0 bg-orange-400/40 left-0 font-bold p-2  text-center text-[15px] mb-3 font-poppins">Consultation</h2>  We provide expert guidance, feasibility analysis, and design advice to help clients make informed and confident project decisions.
                         <div className="relative w-full mx-auto sm:mx-0 order-1 sm:order-2">
                             <img
                                 src="/img/gozie-consult.jpg"
@@ -60,8 +59,7 @@ export default function Service() {
                             />
                         </div>
                         <div className=" relative flex text-left lg:text-center md:text-center gap-3 lg:flex-col justify-center items-center h-[200] lg:h-[250] md:h-[250] font-poppins text-xs sm:text-sm font-bold text-left sm:text-right shadow-[0_10px_10px_-2px_rgba(0,0,0,0.40)] p-3 rounded order-2 sm:order-1">
-                           <h2 className="absolute top-0 bg-orange-400/40 left-0 font-bold p-2  text-center text-[15px] mb-3 font-poppins">Building</h2>  With a passion for quality, integrity, and excellence, he drives the company to deliver exceptional results in every project.
-                        </div>
+                           <h2 className="absolute top-0 bg-orange-400/40 left-0 font-bold p-2  text-center text-[15px] mb-3 font-poppins">Building</h2>  We bring designs to life through precise execution, quality craftsmanship, and strict attention to structural and material standards.
                     </div>
 
                 </div>

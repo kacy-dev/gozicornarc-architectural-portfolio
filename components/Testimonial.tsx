@@ -130,7 +130,7 @@ export default function Testimonial() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14">
 
           {/* LEFT — FLOWING TESTIMONIALS */}
-          <div className="relative h-[540px] lg:h-[500px] overflow-hidden rounded-[32px]">
+          <div className="relative order-2  h-[540px] lg:h-[500px] overflow-hidden rounded-[32px]">
             <div
               className="absolute inset-0"
               style={{
@@ -179,7 +179,7 @@ export default function Testimonial() {
           </div>
 
           {/* RIGHT — CONTEXT + COUNTERS */}
-          <div ref={statsRef} className="hidden lg:flex flex-col">
+          <div ref={statsRef} className=" order-1 lg:flex flex-col">
             <span className="text-sm font-semibold font-poppins bg-orange-400/30 max-w-max p-1 tracking-widest text-orange-500 mb-4">
               CLIENT EXPERIENCE
             </span>
@@ -194,7 +194,7 @@ export default function Testimonial() {
               refined digital architecture.
             </p>
 
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-3 md:grid-cols-3 gap-6">
               {stats.map((stat, i) => (
                 <div
                   key={i}
