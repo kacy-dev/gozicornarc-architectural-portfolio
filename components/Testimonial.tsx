@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect } from "react";
 
-/* -------------------- DATA -------------------- */
 
 const testimonials = [
   {
@@ -33,7 +32,6 @@ const stats = [
   { staticText: "24/7", label: "Ongoing Support" },
 ];
 
-/* -------------------- COUNTER -------------------- */
 
 function AnimatedCounter({
   value,
@@ -77,7 +75,6 @@ function AnimatedCounter({
   );
 }
 
-/* -------------------- COMPONENT -------------------- */
 
 export default function Testimonial() {
   const containerRef = useRef<HTMLDivElement | null>(null);

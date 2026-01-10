@@ -255,30 +255,6 @@ export default function RootLayout({
         <meta name="theme-color" content="#FF6600" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-
-          <link
-          rel="preload"
-          as="image"
-          href="https://res.cloudinary.com/dgmem5lsz/image/upload/v1767871849/IMG_0715_1_p6m0ny.jpg"
-          imagesrcset="
-            https://res.cloudinary.com/dgmem5lsz/image/upload/w_800/v1767871849/IMG_0715_1_p6m0ny.jpg 800w,
-            https://res.cloudinary.com/dgmem5lsz/image/upload/w_1600/v1767871849/IMG_0715_1_p6m0ny.jpg 1600w,
-            https://res.cloudinary.com/dgmem5lsz/image/upload/w_2400/v1767871849/IMG_0715_1_p6m0ny.jpg 2400w
-          "
-          imagesizes="100vw"
-        />
-          <link
-          rel="preload"
-          as="image"
-          href="https://res.cloudinary.com/dgmem5lsz/image/upload/v1767872121/gozie-consult_svtcn2.heic"
-          imagesrcset="
-            https://res.cloudinary.com/dgmem5lsz/image/upload/w_800/v1767872121/gozie-consult_svtcn2.heic 800w,
-            https://res.cloudinary.com/dgmem5lsz/image/upload/w_1600/v1767872121/gozie-consult_svtcn2.heic 1600w,
-            https://res.cloudinary.com/dgmem5lsz/image/upload/w_2400/v1767872121/gozie-consult_svtcn2.heic 2400w
-          "
-          imagesizes="100vw"
-        />
       </head>
 
       <body
