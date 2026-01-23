@@ -64,10 +64,10 @@ export default function Hero() {
 
             {/* ================= Content ================= */}
             <div className="relative flex justify-center z-30 mx-auto h-full flex items-center px-4">
-                <div className=" justify-center text-white relative">
+                <div className=" justify-center text-white relative ">
 
                     <div>
-                        <p className="text-sm md:text-lg lg:text-xl uppercase mb-4 tracking-widest font-semibold font-anta">
+                        <p className="text-sm md:text-lg lg:text-xl  uppercase mb-4 tracking-widest font-semibold font-anta">
                             Gozicornarc Contractors Ltd
                         </p>
                         <div className=" ">

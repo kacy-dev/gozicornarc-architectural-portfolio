@@ -24,6 +24,11 @@ const testimonials = [
     role: "Marketing Lead",
     text: "Our conversions improved immediately after launch. Smooth and professional.",
   },
+  {
+    name: "Jeorge G.",
+    role: "Snr Professor",
+    text: "Our conversions improved immediately after launch. Smooth and professional.",
+  },
 ];
 
 const stats = [

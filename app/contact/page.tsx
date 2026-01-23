@@ -20,9 +20,7 @@ export default function ContactPage() {
 
     return (
         <section className="relative w-full min-h-screen bg-gray-50/5 overflow-hidden">
-            {/* Watermark Background */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
-                {/* Text watermark */}
                 <div className="absolute inset-0 flex flex-wrap items-center justify-center opacity-20">
                     {Array.from({ length: 20 }).map((_, i) => (
                         <span
@@ -34,7 +32,6 @@ export default function ContactPage() {
                     ))}
                 </div>
 
-                {/* Optional project images watermark */}
                 <img
                     src="/img/gozie-design.JPG"
                     alt="Watermark"
