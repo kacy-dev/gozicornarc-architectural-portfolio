@@ -234,21 +234,63 @@ export async function getClientById(id) {
   return await clients.findOne(query);
 }
 
+// export async function createClient(clientData) {
+//   const clients = await getCollection('clients');
+//   const newClient = {
+//     ...clientData,
+//     email: clientData.email.toLowerCase(),
+//     createdAt: new Date(),
+//     updatedAt: new Date(),
+//   };
+//   const result = await clients.insertOne(newClient);
+//   return {
+//     ...newClient,
+//     _id: result.insertedId,
+//     id: result.insertedId.toString(),
+//   };
+// }
+
+
 export async function createClient(clientData) {
   const clients = await getCollection('clients');
+  
+  // Check for duplicate email
+  const existingClient = await clients.findOne({ 
+    email: clientData.email.toLowerCase()
+  });
+  
+  if (existingClient) {
+    throw new Error('A client with this email already exists');
+  }
+  
   const newClient = {
     ...clientData,
     email: clientData.email.toLowerCase(),
     createdAt: new Date(),
     updatedAt: new Date(),
   };
+  
   const result = await clients.insertOne(newClient);
+  
   return {
     ...newClient,
     _id: result.insertedId,
     id: result.insertedId.toString(),
   };
 }
+
+// export async function updateClient(id, updates) {
+//   const clients = await getCollection('clients');
+//   const query = ObjectId.isValid(id) && id.length === 24
+//     ? { _id: new ObjectId(id) }
+//     : { id: id };
+//   const result = await clients.findOneAndUpdate(
+//     query,
+//     { $set: { ...updates, updatedAt: new Date() } },
+//     { returnDocument: 'after' }
+//   );
+//   return result.value;
+// }
 
 export async function updateClient(id, updates) {
   const clients = await getCollection('clients');
@@ -260,7 +302,7 @@ export async function updateClient(id, updates) {
     { $set: { ...updates, updatedAt: new Date() } },
     { returnDocument: 'after' }
   );
-  return result.value;
+  return result.value || result;
 }
 
 export async function deleteClient(id) {
