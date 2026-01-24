@@ -1,10 +1,11 @@
 
 'use client';
 
-import { useProjects } from '@/hooks/useProjects';
-import { useClients } from '@/hooks/useClients';
+import { useProjects } from '@/hooks/useProject';
+import { useClients} from '@/hooks/useClient';
 import { useState, useEffect } from 'react';
 import { useRouter, useParams } from 'next/navigation';
+
 
 export default function EditProjectPage() {
   const { projects, updateProject, getProjectById } = useProjects();

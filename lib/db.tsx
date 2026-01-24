@@ -164,6 +164,16 @@ export async function getProjectById(id) {
 
 export async function createProject(projectData) {
   const projects = await getCollection('projects');
+
+  const existingProject = await projects.findOne({ 
+    name: { $regex: new RegExp(`^${projectData.name}$`, 'i') } // case-insensitive
+  });
+  
+  if (existingProject) {
+    throw new Error('A project with this name already exists');
+  } 
+
+
   const newProject = {
     ...projectData,
     status: projectData.status || 'active',
@@ -178,18 +188,25 @@ export async function createProject(projectData) {
   };
 }
 
+
 export async function updateProject(id, updates) {
   const projects = await getCollection('projects');
+  
   const query = ObjectId.isValid(id) && id.length === 24
     ? { _id: new ObjectId(id) }
     : { id: id };
+  
   const result = await projects.findOneAndUpdate(
     query,
     { $set: { ...updates, updatedAt: new Date() } },
     { returnDocument: 'after' }
   );
-  return result.value;
+  
+  // MongoDB returns the document in 'value' property, but sometimes it's directly in result
+  return result.value || result;
 }
+
+
 
 export async function deleteProject(id) {
   const projects = await getCollection('projects');

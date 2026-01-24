@@ -102,12 +102,12 @@ export default function AdminLayout({ children }) {
       <main className="">{children}</main>
 
       {/* Toggle Button */}
-      <button
+      {/* <button
         onClick={() => setShowTab((prev) => !prev)}
         className="fixed bottom-20 right-4 z-50 bg-orange-400 text-white p-2 rounded-full shadow-lg"
       >
         {showTab ? <ChevronDown size={20} /> : <ChevronUp size={20} />}
-      </button>
+      </button> */}
 
       {/* Bottom Tab Bar */}
       {/* <AnimatePresence>

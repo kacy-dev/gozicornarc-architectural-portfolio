@@ -12,7 +12,7 @@ const CONFIG = {
   publicRoutes: ['/', '/about', '/contact', '/projects'],
   
   // API routes that require authentication
-  protectedApiRoutes: ['/api/projects', '/api/clients', '/api/invoices', '/api/materials'],
+  protectedApiRoutes: [ '/api/clients', '/api/invoices', '/api/materials'],
   
   // Public API routes (no auth needed)
   publicApiRoutes: ['/api/auth/login', '/api/auth/register'],

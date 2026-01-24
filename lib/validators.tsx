@@ -32,23 +32,65 @@ export function validateLoginData(data) {
 /**
  * Validate project data
  */
-export function validateProjectData(data) {
+// export function validateProjectData(data) {
+//   const errors = {};
+
+//   if (!data.name || data.name.trim().length === 0) {
+//     errors.name = 'Project name is required';
+//   }
+
+//   if (!data.clientId) {
+//     errors.clientId = 'Client is required';
+//   }
+
+//   if (data.budget && isNaN(Number(data.budget))) {
+//     errors.budget = 'Budget must be a valid number';
+//   }
+
+//   if (data.startDate && !isValidDate(data.startDate)) {
+//     errors.startDate = 'Invalid start date';
+//   }
+
+//   return {
+//     isValid: Object.keys(errors).length === 0,
+//     errors,
+//   };
+// }
+
+
+// / Validation function
+
+
+export function validateProject(data) {
   const errors = {};
 
   if (!data.name || data.name.trim().length === 0) {
     errors.name = 'Project name is required';
   }
 
+  if (data.name > 1) {
+    errors.name = 'Project already exists, Pls choose another name';
+  }
+
   if (!data.clientId) {
     errors.clientId = 'Client is required';
   }
 
-  if (data.budget && isNaN(Number(data.budget))) {
-    errors.budget = 'Budget must be a valid number';
+  if (data.budget && (isNaN(data.budget) || data.budget < 0)) {
+    errors.budget = 'Budget must be a valid positive number';
   }
 
-  if (data.startDate && !isValidDate(data.startDate)) {
-    errors.startDate = 'Invalid start date';
+  if (data.startDate && data.endDate) {
+    const start = new Date(data.startDate);
+    const end = new Date(data.endDate);
+    if (end < start) {
+      errors.endDate = 'End date must be after start date';
+    }
+  }
+
+  const validStatuses = ['active', 'completed', 'on-hold', 'cancelled'];
+  if (data.status && !validStatuses.includes(data.status)) {
+    errors.status = 'Invalid status value';
   }
 
   return {
