@@ -331,21 +331,63 @@ export async function getInvoiceById(id) {
   return await invoices.findOne(query);
 }
 
+// export async function createInvoice(invoiceData) {
+//   const invoices = await getCollection('invoices');
+//   const newInvoice = {
+//     ...invoiceData,
+//     status: invoiceData.status || 'pending',
+//     createdAt: new Date(),
+//     updatedAt: new Date(),
+//   };
+//   const result = await invoices.insertOne(newInvoice);
+//   return {
+//     ...newInvoice,
+//     _id: result.insertedId,
+//     id: result.insertedId.toString(),
+//   };
+// }
+
+
 export async function createInvoice(invoiceData) {
   const invoices = await getCollection('invoices');
+  
+  // Check for duplicate invoice number
+  const existingInvoice = await invoices.findOne({ 
+    invoiceNumber: invoiceData.invoiceNumber
+  });
+  
+  if (existingInvoice) {
+    throw new Error('An invoice with this number already exists');
+  }
+  
   const newInvoice = {
     ...invoiceData,
     status: invoiceData.status || 'pending',
     createdAt: new Date(),
     updatedAt: new Date(),
   };
+  
   const result = await invoices.insertOne(newInvoice);
+  
   return {
     ...newInvoice,
     _id: result.insertedId,
     id: result.insertedId.toString(),
   };
 }
+
+// export async function updateInvoice(id, updates) {
+//   const invoices = await getCollection('invoices');
+//   const query = ObjectId.isValid(id) && id.length === 24
+//     ? { _id: new ObjectId(id) }
+//     : { id: id };
+//   const result = await invoices.findOneAndUpdate(
+//     query,
+//     { $set: { ...updates, updatedAt: new Date() } },
+//     { returnDocument: 'after' }
+//   );
+//   return result.value;
+// }
 
 export async function updateInvoice(id, updates) {
   const invoices = await getCollection('invoices');
@@ -357,7 +399,7 @@ export async function updateInvoice(id, updates) {
     { $set: { ...updates, updatedAt: new Date() } },
     { returnDocument: 'after' }
   );
-  return result.value;
+  return result.value || result;
 }
 
 export async function deleteInvoice(id) {
